@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Header with username, rank, and language switcher -->
+<div class="header">
+    <span id="user-info">User: noch anmelden | Rank: -</span>
+</div>
+
+<!-- Login area -->
+<div class="login-container" id="login-container">
+    <!-- Logo -->
+    <div class="logo-container">
+        <img src="eawcsystem.jpg" alt="EAWC System Logo" class="logo">
+    </div>
+
+    <h2>Login</h2>
+    <form id="loginForm">
+        <label for="username">Benutzername:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="pin">PIN:</label>
+        <input type="password" id="pin" name="pin" required>
+        <button type="submit">Login</button>
+    </form>
+    <b>Gast zugang:</b>
+    <p>Benutzername: Gast</p>
+    <p>Pin: Gast2025</p>
+    <footer>
+        <h1>Kontakt Service</h1>
+        <p>E-mail: eawcsystem@outlook.de</p>
+    </footer>
+</div>
+
+<!-- Start page area (displayed after login) -->
+<div id="start-page" class="hidden">
+    <!-- Logout button on the start page -->
+    <button id="logoutButton" class="small-logout-button" onclick="logout()">Logout</button>
+    <div class="logo-start-page">
+        <img src="eawcsystem.jpg" alt="EAWC System Logo" class="logo">
+    </div>
+    <div id="user-info">User: Nicht eingeloggt | Rank: -</div>
+    <button id="partnership-button" class="hidden" onclick="showPartnershipPage()">Partnership</button>
+    <button id="moderator-button" class="hidden" onclick="showModeratorPage()">Moderator</button>
+</div>
+
+<!-- Partnership area (displayed after clicking the Partnership button) -->
+<div id="Partnership-page" class="hidden">
+    <h1>Partnerschaft Bereich</h1>
+    <div>
+        <h4>Dein Aufgabe als Supporter/innen sind</h4>
+        <p>Sie müssen Ticketsystem entgegen nehmen das sie die Personen helfen müsst und glücklich oder zufrieden ist bei Partnerschaft Bereich</p>
+        <img src="partnerschaft.jpg" alt="Partnerschaft Bild" class="partnerschaft-bild">
+        <p>Wenn Sie eine Partnerschaft eingehen möchten, klicken Sie auf den folgenden Button, um unserem Discord-Server beizutreten:</p>
+        <button onclick="window.location.href='https://discord.com/invite/your-discord-server-link'">Discord Server</button>
+        <button onclick="showStartPageFromPartnership()">Zurück</button>
+    </div>
+</div> 
+
+<!-- Admin area (displayed after clicking the Admin button) -->
+<div id="Moderator-page" class="hidden">
+    <h1>Moderator Bereich</h1>
+    <div>
+        <h4>Info über EAWC System</h4>
+        <a>EAWC System hilft euch, dass es dir wieder gut geht Bereich und vieles mehr.</a>
+        <button onclick="showStartPageFromAdmin()">Zurück</button>
+    </div>
+</div> 
+
+<script src="script.js"></script>
+
+</body>
+</html>
