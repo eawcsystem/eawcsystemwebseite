@@ -2,7 +2,7 @@
 require('dotenv').config();
 
 const users = [
-    { username: process.env.GAST_USER, pin: process.env.GAST_PIN, rank: 'Gast' },
+    { username: 'Gast', pin: 'Gast2025', rank: 'Gast' },
     { username: process.env.INHABER_USER, pin: process.env.INHABER_PIN, rank: 'Inhaber' },
 ];
 
